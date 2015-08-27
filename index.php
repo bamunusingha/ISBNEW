@@ -7,5 +7,13 @@
     /*
         include the header here
     */
+    require "views/basic/header.php";
+?>
+    <h1>INSERT LOGIN HERE</h1>
 
+<?php
+    /*
+        include footer
+    */
+    require "views/basic/footer.php";
 ?>

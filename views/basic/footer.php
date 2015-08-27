@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vishwa
- * Date: 8/27/2015
- * Time: 8:47 PM
- */ 
+    /*
+     * footer template
+     * */
+?>
+
+        </div><!--End of the main Wrapper-->
+    <!--insert main.js-->
+    <script type="text/javascript" src="../../js/main.js"></script>
+    </body>
+</html>
