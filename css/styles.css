@@ -11,6 +11,8 @@ body {
 
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*background: rgba(24, 51, 8, 0.54);*/
+    background: rgba(24, 51, 8, 0.54);
 }
 
 .img-portfolio {
@@ -20,6 +22,24 @@ body {
 .img-hover:hover {
     opacity: 0.8;
 }
+
+/**
+* change nav bar color
+*/
+.navbar-inverse {
+    /*background-color: rgb(15, 43, 2);*/
+    background-color: #007F3D;
+    border-color: #007F3D;
+    color:#FFF;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #FFF;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #FFF;
+}
+
 
 /* Home Page Carousel */
 
