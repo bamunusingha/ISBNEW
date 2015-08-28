@@ -16,9 +16,11 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!--Insert Bootstrap css,styles.css, Jquery and Bootstrap JS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/ISBNEW/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--    Jquery validator-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,6 +30,11 @@
     <title>ISB APP</title>
 </head>
 <body>
+
+<?php
+    //get the database connection
+    require_once "/includes/database/dbconnection.php";
+?>
 
         <!--Navigation menu-->
         <!-- Navigation -->
@@ -41,7 +48,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">ISB</a>
+                    <a class="navbar-brand" href="/ISBNEW/index.php">ISB</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -56,23 +63,22 @@
                             <a href="contact.html">Contact</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">HR Management <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                                    <a href="/ISBNEW/views/employee/addEmploye.php">Add Employee</a>
                                 </li>
                                 <li>
-                                    <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                                    <a href="portfolio-2-col.html">Rating</a>
                                 </li>
                                 <li>
-                                    <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                                    <a href="portfolio-3-col.html">Payroll</a>
                                 </li>
+
                                 <li>
-                                    <a href="portfolio-4-col.html">4 Column Portfolio</a>
+                                    <a href="/ISBNEW/views/employee/allEmployees.php">All Employees</a>
                                 </li>
-                                <li>
-                                    <a href="portfolio-item.html">Single Portfolio Item</a>
-                                </li>
+
                             </ul>
                         </li>
                         <li class="dropdown">

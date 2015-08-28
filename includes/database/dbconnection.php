@@ -8,4 +8,6 @@
  * Incluude this file to get the database connection
  */
 
+require_once "rb.php";
+
 R::setup( 'mysql:host=localhost;dbname=isbdatabase', 'root', '' ); //for both mysql or mariaDB

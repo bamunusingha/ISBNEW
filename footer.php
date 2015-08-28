@@ -13,6 +13,6 @@
             </footer>
         </div><!--End Of Page Content-->
     <!--insert main.js-->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/ISBNEW/js/main.js"></script>
     </body>
 </html>
