@@ -7,7 +7,7 @@
             <footer>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Copyright &copy; ISB <?php echo date("Y");?></p>
+                        <p class="text-center">Copyright &copy; ISB <?php echo date("Y");?></p>
                     </div>
                 </div>
             </footer>
