@@ -19,8 +19,8 @@ require "../../header.php";
         <div class="row">
             <h1 class="text-center">Add Employee</h1>
             <div class="col-md-12">
-                <form class="form-horizontal" action="InsertEmployee.php" method="post">
-                    
+                <form class="form-horizontal" action="" method="post">
+
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Employee First Name</label>
                         <div class="col-sm-10">
@@ -144,11 +144,6 @@ require "../../header.php";
                         </div>
                     </div>
 
-
-
-
-
-
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-default">Insert Employee</button>
@@ -161,4 +156,117 @@ require "../../header.php";
 
 <?php
 require "../../footer.php";
+?>
+
+<?php
+/*
+ * capture submitted data and save it
+ * */
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+
+    $Efname = null;
+    $Emname = null;
+    $Elname = null;
+    $Edob = null;
+    $Enic = null;
+    $Eaddrees = null;
+    $Econtact = null;
+    $Ejoined = null;
+    $Ebank = null;
+    $Eaccount = null;
+    $Ebasic = null;
+    $Gender = null;
+    $Position = null;
+
+
+
+//$conn->
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        if (isset($_POST["emplyoeeFname"]) && !empty($_POST["emplyoeeFname"])) {
+            $Efname = $_POST['emplyoeeFname'];
+        }
+
+
+        if (isset($_POST["emplyoeeMname"]) && !empty($_POST["emplyoeeMname"])) {
+            $Emname = $_POST['emplyoeeMname'];
+        }
+
+
+        if (isset($_POST["emplyoeeLname"]) && !empty($_POST["emplyoeeLname"])) {
+            $Elname = $_POST['emplyoeeLname'];
+        }
+
+
+        if (isset($_POST["emplyoeeDob"]) && !empty($_POST["emplyoeeDob"])) {
+            $Edob = date('Y-m-d', strtotime($_POST['emplyoeeDob']));
+
+        }
+
+        if (isset($_POST["emplyoeeNic"]) && !empty($_POST["emplyoeeNic"])) {
+            $Enic = $_POST['emplyoeeNic'];
+        }
+
+
+        if (isset($_POST["emplyoeeAddress"]) && !empty($_POST["emplyoeeAddress"])) {
+            $Eaddrees = $_POST['emplyoeeAddress'];
+        }
+
+        if (isset($_POST["emplyoeeContact"]) && !empty($_POST["emplyoeeContact"])) {
+            $Econtact = $_POST['emplyoeeContact'];
+        }
+
+
+        if (isset($_POST["emplyoeeJoined"]) && !empty($_POST["emplyoeeJoined"])) {
+            $Ejoined = date('Y-m-d', strtotime($_POST['emplyoeeJoined']));
+        }
+
+        if (isset($_POST["employeeBank"]) && !empty($_POST["employeeBank"])) {
+            $Ebank = $_POST['employeeBank'];
+        }
+
+        if (isset($_POST["emplyoeeAcc"]) && !empty($_POST["emplyoeeAcc"])) {
+            $Eaccount = $_POST['emplyoeeAcc'];
+        }
+
+        if (isset($_POST["emplyoeeBsal"]) && !empty($_POST["emplyoeeBsal"])) {
+            $Ebasic = $_POST['emplyoeeBsal'];
+        }
+//    gender
+        if (isset($_POST["optradio"]) && !empty($_POST["optradio"])) {
+            $Gender = $_POST['optradio'];
+        }
+
+        if (isset($_POST["positon"]) && !empty($_POST["positon"])) {
+            $Position = $_POST['positon'];
+        }
+    }
+
+
+    //VALIDATION MUST GO THERE
+
+    //save into the database
+
+    $emp = R::dispense( 'employee' );
+
+    $emp->fname=$Efname;
+    $emp->mname=$Emname;
+    $emp->lname=$Elname;
+    $emp->dateOfBirth=$Edob;
+    $emp->nic=$Enic;
+    $emp->address=$Eaddrees;
+    $emp->contact=$Econtact;
+    $emp->position=$Position;
+    $emp->joindDate=$Ejoined;
+    $emp->bank=$Ebank;
+    $emp->account=$Eaccount;
+    $emp->basicSal=$Ebasic;
+    $emp->gender=$Gender;
+
+
+    $id = R::store( $emp );
+
+}//end
 ?>

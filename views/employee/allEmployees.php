@@ -23,9 +23,9 @@ require "../../header.php";
 
                             <?php
                             //load all employees
-//                            $employes = R::dispense( 'employe' );
-//                            $employes = R::findAll('employe');
-//                            print_r($employes);
+                            $employes = R::dispense( 'employee' );
+                            $employes = R::findAll('employee');
+                            print_r($employes);
 
 
 
