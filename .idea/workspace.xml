@@ -48,8 +48,8 @@
       <file leaf-file-name="allEmployees.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/employee/allEmployees.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5903614" vertical-offset="116" max-vertical-offset="1054">
-              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.50880283" vertical-offset="357" max-vertical-offset="1360">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="e#6#133#0#PHP" expanded="true" />
               </folding>
@@ -60,8 +60,8 @@
       <file leaf-file-name="addEmploye.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/employee/addEmploye.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8076925" vertical-offset="4090" max-vertical-offset="4709">
-              <caret line="251" column="33" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="33" />
+            <state vertical-scroll-proportion="-10.730769" vertical-offset="4141" max-vertical-offset="4709">
+              <caret line="260" column="18" selection-start-line="260" selection-start-column="10" selection-end-line="260" selection-end-column="18" />
               <folding>
                 <element signature="e#6#115#0#PHP" expanded="true" />
                 <element signature="e#7118#7164#0#PHP" expanded="true" />
@@ -303,7 +303,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -498,6 +498,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3146" max-vertical-offset="3740">
+          <caret line="203" column="1" selection-start-line="203" selection-start-column="1" selection-end-line="203" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.5384617" vertical-offset="1326" max-vertical-offset="2193">
@@ -508,18 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3146" max-vertical-offset="3740">
-          <caret line="203" column="1" selection-start-line="203" selection-start-column="1" selection-end-line="203" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/employee/addEmploye.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8076925" vertical-offset="4090" max-vertical-offset="4709">
-          <caret line="251" column="33" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="33" />
+        <state vertical-scroll-proportion="-10.730769" vertical-offset="4141" max-vertical-offset="4709">
+          <caret line="260" column="18" selection-start-line="260" selection-start-column="10" selection-end-line="260" selection-end-column="18" />
           <folding>
             <element signature="e#6#115#0#PHP" expanded="true" />
             <element signature="e#7118#7164#0#PHP" expanded="true" />
@@ -529,8 +529,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/employee/allEmployees.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5903614" vertical-offset="116" max-vertical-offset="1054">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.50880283" vertical-offset="357" max-vertical-offset="1360">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="e#6#133#0#PHP" expanded="true" />
           </folding>

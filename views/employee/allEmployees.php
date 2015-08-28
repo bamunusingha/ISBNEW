@@ -16,36 +16,54 @@ require "../../header.php";
 
 <!--        Show all employees in a table-->
         <div class="container-fluid">
+
             <div class="row">
-                <h1 class="text-center">All Employees</h1>
+                <div class="col-sm-6">
+                    <h1 class="text-center">All Employees</h1>
+                </div>
+                <div class="col-sm-4">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+
                 <div class="col-md-6 col-md-offset-3 table-responsive">
                         <table class="table allEmployeeTable">
 
+                            <tr>
+                                <th>Emp Id</th>
+                                <th>Emp Name</th>
+                                <th>Emp Postion</th>
+                            </tr>
+                            
+                            
                             <?php
                             //load all employees
                             $employes = R::dispense( 'employee' );
                             $employes = R::findAll('employee');
-                            print_r($employes);
 
+                            foreach ($employes as $employee) {
+                                    
 
-
-
-
-                            $all=R::load('book',1);
-
-                            print_r($all->title);
 
                             ?>
 
 
+                            <tr> <td><?php echo $employee->id;?></th><td><a href="#"><?php echo $employee->fname." ". $employee->mname." ". $employee->lname?></a></td> <td><?php echo $employee->position;?></td></tr>
 
-                            <tr> <th>11</th><td><a href="#">dsdsdsadasdsa</a></td> </tr>
-                            <tr> <th>11</th><td><a href="#">dsdsdsadasdsa</a></td> </tr>
-                            <tr> <th>11</th><td><a href="#">dsdsdsadasdsa</a></td> </tr>
-                            <tr> <th>11</th><td><a href="#">dsdsdsadasdsa</a></td> </tr>
-                            <tr> <th>11</th><td><a href="#">dsdsdsadasdsa</a></td> </tr>
-                            <tr> <th>11</th><td><a href="#">dsdsdsadasdsa</a></td> </tr>
-
+                            <?php
+                            }
+                            ?>
                         </table>
                 </div>
             </div>
