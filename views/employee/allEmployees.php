@@ -81,7 +81,7 @@ require "../../header.php";
 
 <?php
                                 }else{
-                                    echo "empty result";
+                                    echo "Your Search Has No Result";
                                 }
 
                             }else{
