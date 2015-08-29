@@ -22,7 +22,7 @@ require "../../header.php";
                     <h1 class="text-center">All Employees</h1>
                 </div>
                 <div class="col-sm-4">
-                    <form class="navbar-form" role="search">
+                    <form class="navbar-form" role="search" method="post" action="">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search" name="q">
                             <div class="input-group-btn">
@@ -48,22 +48,57 @@ require "../../header.php";
                             
                             
                             <?php
+                            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                                //then search is done
+                                $searchWord=$_POST['q'];
+                                $bean=null;
+                                //check if input is not NIC
+                                if (!preg_match('/[^A-Za-z ]/', $searchWord))
+                                {
+                                    //then this is not the nic. so search for full name
+                                    $bean = R::find('employee',' full_name LIKE :full_name ',
+                                        array(':full_name' => '%' . $searchWord . '%' )
+                                    );
+                                }else{
+                                    $bean = R::find('employee',' nic LIKE :nic ',
+                                        array(':nic' => '%' . $searchWord . '%' )
+                                    );
+                                }
+
+
+
+
+
+                                if(!empty($bean)){
+//                                    echo "not empty result";
+                                    //then show the result
+
+                                    foreach ($bean as $employee) {?>
+                                        <tr> <td><?php echo $employee->id;?></th><td><a href="updateEmployee.php?id=<?php echo $employee->id;?>"><?php echo $employee->fname." ". $employee->mname." ". $employee->lname?></a></td> <td><?php echo $employee->position;?></td></tr>
+
+
+                                        <?php }?>
+
+<?php
+                                }else{
+                                    echo "empty result";
+                                }
+
+                            }else{
+
+
                             //load all employees
                             $employes = R::dispense( 'employee' );
                             $employes = R::findAll('employee');
-
-                            
                             foreach ($employes as $employee) {
-                                    
-
-
                             ?>
 
 
-                            <tr> <td><?php echo $employee->id;?></th><td><a href="#"><?php echo $employee->fname." ". $employee->mname." ". $employee->lname?></a></td> <td><?php echo $employee->position;?></td></tr>
+                            <tr> <td><?php echo $employee->id;?></th><td><a href="updateEmployee.php?id=<?php echo $employee->id;?>"><?php echo $employee->fname." ". $employee->mname." ". $employee->lname?></a></td> <td><?php echo $employee->position;?></td></tr>
 
                             <?php
-                            }
+                                 }
+                            }//end of else
                             ?>
                         </table>
                 </div>
